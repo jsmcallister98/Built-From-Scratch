@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 9px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Navbar  */
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color:  #2d2d30;
+    opacity: 0.9;
+    z-index: 9999;
+    padding: 0;
+    height: 50px;
+}
+
+.container1 {
+    font-family: 'Lato', sans-serif;
+}
+
+.nav-links, .logo-container a {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+.links a, .logo-container a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 15px;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.links a:hover {
+    color: #FFF;
+}
+
+.search {
+    margin-top: 2px;
+}
+
+div.logo-container, div.nav-links-container {
+    height: 50px;
+}
+
+.logo-container a {
+    font-size: 18px;
+    padding: 12.2px 15px;
+}
+
+/* Carousel */
+
+.carousel-caption h5, .carousel-caption p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-caption h5 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 9px;
+    margin: 20px 0 30px;
+}
+
+.carousel-caption p {
+    font-family: 'Lato', sans-serif;
+    font: 400 15px/1.8 Lato, sans-serif;
+    margin-bottom: 16px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item img {
+    filter: grayscale(90%);
+}
+
+.fa-caret-down {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.fa-circle {
+    color: #FFF;
+    margin: 0 2px;
+    font-size: 0.65rem;
+}
+
+.carousel-indicators {
+    margin-bottom: 30px;
+}
+
+.more {
+    margin-right: -4px;
+}
+
+/* container 2 */
+.band-info {
+    text-align: center;
+}
+
+div.container.container2 {
+    padding: 80px 105px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -25px;
+}
+
+.band-info h3 {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin: 10px 0 30px 0;
+}
+
+.love-music, .info-text {
+    margin: 0 0 10px;
+    font-family: 'Lato', sans-serif;
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+ul.band-members {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+li.members::marker {
+    display: none;
+    color: white;
+}
+
+.member-img img {
+    border-radius: 50%;
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 85%;
+    height: 80%;
+    opacity: 0.7;
+}
+
+p.member-name {
+    font-family: 'Lato', sans-serif;
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+div.member-img {
+    padding: 0 11px;
+}
+
+/* container 3 */
+.container3 .container {
+    padding: 0 8%;
+}
+
+.container3 {
+    background: #2d2d30;
+    color: #FFF;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: 400 15px/1.8 Lato, sans-serif;
+    padding: 80px 120px;
+}
+
+.container3 p {
+    color: #bdbdbd;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0px;
+    margin-bottom: 35px;
+    line-height: 1.6rem;
+}
+
+.list-group {
+    margin-bottom: 20px;
+    color: #b9b9b9;
+}
+
+.list-group-item {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin-bottom: -1;
+    text-align: left;
+    font: 400 15px/1.8 Lato, sans-serif;
+}
+
+.list-group-item.nov {
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge-danger {
+    font-size: 11px;
+    padding: 4px 6px;
+}
+
+.badge-secondary {
+    border-radius: 12px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+    font: Lato, sans-serif;
+    height: 70%;
+}
+
+div.city-card div.card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+div.card-body {
+    padding: 0 0 15px 0;
+}
+
+p.card-title {
+    font-family: Lato, sans-serif;
+    font: 15px Lato, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(88, 88, 88);
+    margin: 15px 0 10px;
+}
+
+p.card-text {
+    margin: 15px 0 10px;
+    font-size: 13.5px;
+    color: rgb(88, 88, 88);
+    line-height: 1.5em;
+}
+
+.btn-dark {
+    border-radius: 0;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
+/* container4  */
+
+.container.container4 {
+    padding: 80px 65px;
+}
+
+.contact-info p {
+    text-align: left;
+    font: 15px Lato, sans-serif;    
+}
+
+.contact-info li {
+    list-style: none;
+}
+
+.contact-heading em {
+    font: 15px Lato, sans-serif;    
+    font-style: italic;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 114px;
+    text-align: left;
+    font: 15px Lato, sans-serif;    
+    border-radius: 0;
+}
+
+.input-group input {
+    border-radius: 0;
+    text-align: left;
+    font: 15px Lato, sans-serif;  
+}
+
+div.contact-form div.identifying-info.row div.input-group {
+    margin-bottom: 20px;
+}
+
+.send-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #2d2d30;
+    font: 15px Lato, sans-serif;  
+}
+
+.tab-pane h2 {
+    font: 30px Lato, sans-serif;  
+    text-align: left;
+    margin: 15px 0 0;
+}
+
+.tab-pane p {
+    font: 15px Lato, sans-serif;  
+    text-align: left;
+    margin: 15px 0 0;
+}
+
+/* container 5 */
+div.container5 {
+    text-align: center;
+}
+
+.container5 img {
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
+footer {
+    height: 153px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #FFF;
+    font: 400 15px/1.8 Lato, sans-serif;
+    background: #2d2d30;
+}
+
+div.made-by a, .top-of-page a {
+    color: #FFF;
+}
+
