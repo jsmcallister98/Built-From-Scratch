@@ -5,31 +5,64 @@ const noBtn = document.getElementById('no-btn');
 axios.defaults.headers.common["x-api-key"] = '1f53c734-cd9d-4786-a874-d25fdda1eca1';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
+let image
+let imageID
+let likedHtml = ''
+let dislikedHtml = ''
+
 const getData = () => {
     axios.get('https://api.thecatapi.com/v1/images/search')
     .then(response => {
-        const image = response.data[0].url
+        image = response.data[0].url
+        imageID = response.data[0].id
+        console.log(image)
         document.getElementById('cat-img').src = image
     })
-    .catch(function (error) {
+    .catch(error => {
         console.log(error);
     })
 };
 
-const sendData = () => {
+
+const sendLikedData = () => {
     axios.post('https://api.thecatapi.com/v1/votes', 
     {
-        image_id: '',
+        image_id: imageID,
         value: 1
     })
     .then(response => {
-        console.log(response);
+    likedHtml += `
+        <div class="liked-cats">
+            <img class="liked-img" src="${image}"></img>
+        </div>
+    `;
+    document.getElementById('liked-result').innerHTML = likedHtml;
+    getData();
     })
     .catch(error => {
         console.log(error);
     });
 };
 
-yesBtn.addEventListener('click', getData);
-yesBtn.addEventListener('click', sendData);
-noBtn.addEventListener('click', getData);
+const sendDislikedData = () => {
+    axios.post('https://api.thecatapi.com/v1/votes', 
+    {
+        image_id: imageID,
+        value: 0
+    })
+    .then(response => {
+    dislikedHtml += `
+        <div class="disliked-cats">
+            <img class="disliked-img" src="${image}"></img>
+        </div>
+    `;
+    document.getElementById('disliked-result').innerHTML = dislikedHtml;
+    getData();
+    })
+    .catch(error => {
+        console.log(error);
+    });
+};
+
+yesBtn.addEventListener('click', sendLikedData);
+noBtn.addEventListener('click', sendDislikedData);
