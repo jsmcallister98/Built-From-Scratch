@@ -11,10 +11,10 @@ let likedHtml = ''
 let dislikedHtml = ''
 
 const getData = () => {
-    axios.get('https://api.thecatapi.com/v1/images/search')
+    axios.get('https://young-hollows-19286.herokuapp.com/')
     .then(response => {
-        image = response.data[0].url
-        imageID = response.data[0].id
+        image = response.data.url
+        imageID = response.data.id
         console.log(image)
         document.getElementById('cat-img').src = image
     })
