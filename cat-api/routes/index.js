@@ -76,16 +76,16 @@ const cats = [
   }
 ]
 
-cats.forEach(function(cat) {
-  const newCat = new Cat(cat);
-  newCat.save((error) => {
-    if (error) {
-      console.log('error');
-    } else {
-      console.log('data saved to db');
-    }
-  });
-});
+// cats.forEach(function(cat) {
+//   const newCat = new Cat(cat);
+//   newCat.save((error) => {
+//     if (error) {
+//       console.log('error');
+//     } else {
+//       console.log('data saved to db');
+//     }
+//   });
+// });
 
 /* GET home page. */
 router.get('/', function(req, res) {
