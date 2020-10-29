@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var request = require('request');
 var mongoose = require('mongoose');
 
 const MONGODB_URI = 'mongodb+srv://jacob:jacob@cluster0.wchaf.mongodb.net/cats?retryWrites=true&w=majority'
