@@ -11,7 +11,7 @@ let likedHtml = ''
 let dislikedHtml = ''
 
 const getData = () => {
-    axios.get('https://young-hollows-19286.herokuapp.com/')
+    axios.get('https://serene-woodland-18996.herokuapp.com/')
     .then(response => {
         image = response.data.url
         imageID = response.data.id
