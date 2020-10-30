@@ -25,7 +25,7 @@ const getData = () => {
 
 
 const sendLikedData = () => {
-    axios.post('https://api.thecatapi.com/v1/votes', 
+    axios.post('https://serene-woodland-18996.herokuapp.com/votes', 
     {
         image_id: imageID,
         value: 1
@@ -45,7 +45,7 @@ const sendLikedData = () => {
 };
 
 const sendDislikedData = () => {
-    axios.post('https://api.thecatapi.com/v1/votes', 
+    axios.post('https://serene-woodland-18996.herokuapp.com/votes', 
     {
         image_id: imageID,
         value: 0

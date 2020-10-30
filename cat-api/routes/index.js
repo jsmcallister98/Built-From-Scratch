@@ -86,6 +86,14 @@ const cats = [
 //   });
 // });
 
+const voteSchema = new Schema ({
+  image_id: {
+    type: id,
+    ref: "Cat"
+  },
+  value: Number
+})
+
 /* GET home page. */
 router.get('/', function(req, res) {
   randomNum = Math.floor(Math.random() * cats.length);
@@ -98,4 +106,11 @@ router.get('/', function(req, res) {
     })
 });
 
+// post a vote
+router.post('/votes', function(req, res) {
+
+})
+
+// get votes
+router.get('/votes')
 module.exports = router;
