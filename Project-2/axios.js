@@ -23,14 +23,39 @@ const getData = () => {
     })
 };
 
+const displayVotes = () => {
+    axios.get('https://serene-woodland-18996.herokuapp.com/votes')
+    .then(response => {
+        response.data.forEach(cat => {
+            if (cat.value === 0) {
+                dislikedHtml += `
+                    <div class="disliked-cats">
+                        <img class="disliked-img" src="${cat.url}"></img>
+                    </div>
+                `;
+                document.getElementById('disliked-result').innerHTML = dislikedHtml;
+            } else {
+                likedHtml += `
+                    <div class="liked-cats">
+                        <img class="liked-img" src="${cat.url}"></img>
+                    </div>
+                `;
+                document.getElementById('liked-result').innerHTML = likedHtml;
+            }
+        });
+        console.log(response.data)
+    })
+}
 
 const sendLikedData = () => {
     axios.post('https://serene-woodland-18996.herokuapp.com/votes', 
     {
         image_id: imageID,
-        value: 1
+        value: 1,
+        url: image
     })
     .then(response => {
+    console.log(response)
     likedHtml += `
         <div class="liked-cats">
             <img class="liked-img" src="${image}"></img>
@@ -48,7 +73,8 @@ const sendDislikedData = () => {
     axios.post('https://serene-woodland-18996.herokuapp.com/votes', 
     {
         image_id: imageID,
-        value: 0
+        value: 0,
+        url: image
     })
     .then(response => {
     dislikedHtml += `
